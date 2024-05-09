@@ -8,6 +8,7 @@ const button = document.querySelector('#btn');
 const list = document.querySelector('ul');
 const input = document.querySelector('input');
 
+// @ts-ignore
 input.disabled =true;
 
 
@@ -25,6 +26,7 @@ const renderTask = function(addedTask)
     renderLink(li, addedTask.getId());  
 
 
+    // @ts-ignore
     list.appendChild(li);
 
 }
@@ -55,6 +57,7 @@ const getTasks = () =>
             renderTask(currentTask);
         });
 
+        // @ts-ignore
         input.disabled = false;
     })
     .catch((error) => 
@@ -96,9 +99,11 @@ const getTasks = () =>
 
 
 
+// @ts-ignore
 button.addEventListener('click', function(event) 
 {
     event.preventDefault();
+    // @ts-ignore
     const taskContent = input.value.trim();
 
     if (taskContent !== '') 
