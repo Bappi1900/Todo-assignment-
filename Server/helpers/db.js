@@ -1,6 +1,6 @@
-// Import the 'dotenv' package to be able to use environment variables from the .env file
+// @ts-ignore
 require('dotenv').config();
-// Import the 'pg' library, which allows us to interact with PostgreSQL databases
+
 const { Pool } = require('pg');
 
 
@@ -9,6 +9,7 @@ const pool = new Pool({
   host: process.env.DB_HOST,
   database: process.env.DB_NAME,
   password: process.env.DB_PASSWORD,
+  // @ts-ignore
   port: process.env.DB_PORT,
 });
 
