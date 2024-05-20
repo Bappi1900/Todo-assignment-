@@ -4,11 +4,8 @@ const express = require('express')
 const cors = require('cors')
 
 
-// @ts-ignore
-require('dotenv').config();
 
-// @ts-ignore
-const { todoRouter } = require("./routes/todo.js")
+const  todoRouter  = require("./routes/todo.js")
 
 
  
